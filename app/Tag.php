@@ -3,10 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Cviebrock\EloquentSluggable\Sluggable;
+//use Cviebrock\EloquentSluggable\Sluggable;
 class Tag extends Model
 {
-    use Sluggable;
+ //   use Sluggable;
    public function  posts()
    {
     return $this->belongsToMany(
@@ -17,12 +17,12 @@ class Tag extends Model
 
     );
    }
-    public function sluggable()
+  /*  public function sluggable()
     {
         return [
             'slug' => [
                 'source' => 'title'
             ]
         ];
-    }
+    }*/
 }
